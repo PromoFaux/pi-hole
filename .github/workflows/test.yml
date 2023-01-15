@@ -8,6 +8,10 @@ on:
   # Allows to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  # https://github.com/tox-dev/tox/issues/1468
+  PY_COLORS: 1
+
 permissions:
   contents: read
 
@@ -23,8 +27,7 @@ jobs:
             debian_10
           ]
     env:
-      DISTRO: ${{matrix.distro}}
-      PY_COLORS: 1
+      DISTRO: ${{matrix.distro}}      
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.1.0
