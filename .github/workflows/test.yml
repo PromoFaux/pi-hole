@@ -9,8 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  # https://github.com/tox-dev/tox/issues/1468
-  PY_COLORS: "1"
+  # https://github.com/tox-dev/tox/issues/1468  
   FORCE_COLOR: "1"
 
 permissions:
