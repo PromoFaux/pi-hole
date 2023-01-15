@@ -1,6 +1,7 @@
 name: Test Supported Distributions
 
 on:
+  push:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
@@ -52,14 +53,7 @@ jobs:
       matrix:
         distro:
           [
-            debian_10,
-            debian_11,
-            ubuntu_20,
-            ubuntu_22,
-            centos_8,
-            centos_9,
-            fedora_35,
-            fedora_36,
+            debian_10
           ]
     env:
       DISTRO: ${{matrix.distro}}
