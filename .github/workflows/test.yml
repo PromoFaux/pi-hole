@@ -70,4 +70,6 @@ jobs:
         run: pip install -r test/requirements.txt
 
       - name: Test with tox
+        env:
+          PY_COLORS: 1
         run: tox -c test/tox.${DISTRO}.ini
