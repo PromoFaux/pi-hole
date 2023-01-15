@@ -24,6 +24,7 @@ jobs:
           ]
     env:
       DISTRO: ${{matrix.distro}}
+      PY_COLORS: 1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3.1.0
@@ -36,7 +37,5 @@ jobs:
       - name: Install dependencies
         run: pip install -r test/requirements.txt
 
-      - name: Test with tox
-        env:
-          PY_COLORS: 1
+      - name: Test with tox        
         run: tox -c test/tox.${DISTRO}.ini
