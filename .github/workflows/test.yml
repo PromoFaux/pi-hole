@@ -10,7 +10,8 @@ on:
 
 env:
   # https://github.com/tox-dev/tox/issues/1468
-  PY_COLORS: 1
+  PY_COLORS: "1"
+  FORCE_COLOR: "1"
 
 permissions:
   contents: read
